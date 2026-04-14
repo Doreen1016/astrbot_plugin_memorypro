@@ -1,0 +1,32 @@
+{
+    "threshold": {
+        "type": "int",
+        "description": "自动触发一次总结轮次",
+        "default": 100
+    },
+    "fixed_name": {
+        "type": "string",
+        "description": "人格名（留空则使用系统 ID）",
+        "default": ""
+    },
+    "summary_prompt": {
+        "type": "text",
+        "description": "记忆总结提示词。可用变量：{persona_name}",
+        "default": "你现在是 {persona_name}。请以第一人称视角，直接撰写你与“用户”最近互动的核心档案条目。要求：1. 禁止出现“好的”、“这是总结”等任何开场白或确认语；2. 直接开始记录正文；3. 重点记录对方的喜好、重要约定、对方当下的情绪及你们的特有默契；4. 保持你特有的语气风格，150字内。"
+    },
+    "api_url": {
+        "type": "string",
+        "description": "总结专用 API URL (留空则使用默认配置。例: https://api.openai.com/v1)",
+        "default": ""
+    },
+    "api_key": {
+        "type": "string",
+        "description": "总结专用 API Key",
+        "default": ""
+    },
+    "model_name": {
+        "type": "string",
+        "description": "总结专用模型名 (例: gpt-4o-mini)",
+        "default": "gpt-4o-mini"
+    }
+}
